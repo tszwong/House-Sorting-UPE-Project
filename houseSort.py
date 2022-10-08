@@ -48,10 +48,11 @@ def assign_family():
 
 
 def displayResults(family):
-    clear()
-    print(f"{family}: ")
-    for i in fam_1:
+    print("family: ")
+    for i in family:
         print(i)
+
+    print()
 
 
 def calculate_results():
@@ -77,7 +78,7 @@ def calculate_results():
             family_4.append(member)
 
         NAMES_PPL.pop(member)
-    
+
     fam_1 = family_1
     fam_2 = family_2
     fam_3 = family_3
@@ -101,6 +102,12 @@ def client():
             NAMES_PPL[curr_input] = None
 
         # print(NAMES_PPL)
+
+    calculate_results()
+    displayResults(fam_1)
+    displayResults(fam_2)
+    displayResults(fam_3)
+    displayResults(fam_4)
 
 
 client()
