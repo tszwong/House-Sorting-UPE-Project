@@ -8,6 +8,10 @@ import sys
 # houses
 NAMES_PPL = {}
 FAMILIES = ["fam_1", "fam_2", "fam_3", "fam_4"]
+fam_1 = []
+fam_2 = []
+fam_3 = []
+fam_4 = []
 
 
 def clear():
@@ -43,8 +47,15 @@ def assign_family():
     return fam
 
 
+def displayResults(family):
+    clear()
+    print(f"{family}: ")
+    for i in fam_1:
+        print(i)
+
+
 def calculate_results():
-    num_ppl = len(NAMES_PPL)
+    global fam_1, fam_2, fam_3, fam_4
 
     # creating the families
     family_1 = assign_family()
@@ -66,28 +77,11 @@ def calculate_results():
             family_4.append(member)
 
         NAMES_PPL.pop(member)
-        
     
-
-
-def displayResults():
-    clear()
-    print(f"{FAMILIES[0]}: ")
-    for i in fam_1:
-        print(i)
-
-    print(f"\n{FAMILIES[1]}: ")
-    for i in fam_2:
-        print(i)
-
-    print(f"\n{FAMILIES[2]}: ")
-    for i in fam_3:
-        print(i)
-
-    print(f"\n{FAMILIES[3]}: ")
-    for i in fam_4:
-        print(i)
-
+    fam_1 = family_1
+    fam_2 = family_2
+    fam_3 = family_3
+    fam_4 = family_4
 
 
 def client():
