@@ -39,40 +39,35 @@ def assign_family():
         member = random.choice(list(NAMES_PPL.keys()))
         fam.append(member)
         NAMES_PPL.pop(member)
-    
+
     return fam
-
-
-def remainder_members():
-    while len(NAMES_PPL) != 0:
-        placed = random.randint(0, len(FAMILIES))
-        if placed == 0:
-            member = random.choice(list(NAMES_PPL.keys()))
-            fam_1.append(member)
-            NAMES_PPL.pop(member)
-        elif placed == 1:
-            member = random.choice(list(NAMES_PPL.keys()))
-            fam_2.append(member)
-            NAMES_PPL.pop(member)
-        elif placed == 2:
-            member = random.choice(list(NAMES_PPL.keys()))
-            fam_3.append(member)
-            NAMES_PPL.pop(member)
-        else:
-            member = random.choice(list(NAMES_PPL.keys()))
-            fam_4.append(member)
-            NAMES_PPL.pop(member)
-
 
 
 def calculate_results():
     num_ppl = len(NAMES_PPL)
-    
+
     # creating the families
     family_1 = assign_family()
     family_2 = assign_family()
     family_3 = assign_family()
     family_4 = assign_family()
+
+    while len(NAMES_PPL) != 0:
+        placed = random.randint(0, len(FAMILIES))
+        member = random.choice(list(NAMES_PPL.keys()))
+
+        if placed == 0:
+            family_1.append(member)
+        elif placed == 1:
+            family_2.append(member)
+        elif placed == 2:
+            family_3.append(member)
+        else:
+            family_4.append(member)
+
+        NAMES_PPL.pop(member)
+        
+    
 
 
 def displayResults():
@@ -112,9 +107,6 @@ def client():
             NAMES_PPL[curr_input] = None
 
         # print(NAMES_PPL)
-
-    calculate_results()
-    displayResults()
 
 
 client()
