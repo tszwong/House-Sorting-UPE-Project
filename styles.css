@@ -4,11 +4,11 @@
     font-family: "vogue";
     src: url("Vogue.ttf");
     font-family: "cocogoose heavy";
-    src: url("")
+    src: url("");
 }
 
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Raleway";
 }
 
 .navbar {
@@ -28,62 +28,93 @@
     border: none;
     cursor: pointer;
   }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-    right: 0;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropdown-button {
-    background-color: gray;
-  }
 
-  .description {
-    padding-top: 50px;
-    text-align: center;
-  }
+.navbar #UPE-button{
+  margin-left: 20px;
+}
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 0;
+}
+  
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropdown-button {
+  background-color: gray;
+}
 
-  .footer-bar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #941111;
-    color: white;
-    text-align: center;
-  }
+.description {
+  padding-top: 50px;
+  text-align: center;
+}
 
-  #main-upe-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.description h2 {
+  margin: 0px;
+  padding-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 20px;
+}
+
+#createTeamsButton {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.footer-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #941111;
+  color: white;
+  text-align: center;
+}
+
+.footer-bar #footer-left {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.footer-bar #footer-right {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+#main-upe-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 20%;
+}
