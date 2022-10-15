@@ -20,14 +20,22 @@
     background-color: #941111;
 }
 
-.dropdown-button {
+.home-button {
     background-color: #941111;
     color: white;
     padding: 20px;
     font-size: 16px;
+    font-stretch: wider;
     border: none;
     cursor: pointer;
-  }
+}
+
+.home-button:hover {
+  color: #941111;
+  font-weight: bold;
+  transition: 0.5s;
+  background-color: darkgray;
+}
 
 .navbar #UPE-button{
   margin-left: 20px;
@@ -82,16 +90,39 @@
 }
 
 textarea {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   resize: none;
   margin-bottom: 20px;
+  outline: #941111;
+  border-radius: 10px;
+  color: #941111;
 }
 
-#createTeamsButton {
+.button-styles {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   position: relative;
   margin-bottom: 10%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(199, 199, 199);
+}
+
+.button-styles:hover {
+  background-color: #941111;
+  color: #f1f1f1;
+  box-shadow: none;
+  transition: 0.7s;
+  font-weight: bold;
 }
 
 .footer-bar {
+  font-size: 14px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -99,6 +130,8 @@ textarea {
   background-color: #941111;
   color: white;
   text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .footer-bar #footer-left {
@@ -115,8 +148,8 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
-  height: 20%;
+  width: 300px;
+  height: 300px;
 }
 
 .results {
@@ -124,14 +157,28 @@ textarea {
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
 }
 ::-webkit-input-placeholder { /* Webkit */
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
 }
 :-ms-input-placeholder { /* IE */
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
+}
+
+.members {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.results {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#reset {
+  margin-left: 10px;
 }
