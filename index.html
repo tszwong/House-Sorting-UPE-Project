@@ -17,7 +17,7 @@
     <div class="container">
 
         <div class="navbar">
-            <button class="home-button" id="UPE-button" href="#">UPE Sorting Hat</button>
+            <button class="home-button" id="UPE-button" href="index.html">UPE Sorting Hat</button>
             <!-- <div class="dropdown">
                 <button class="dropdown-button" id="eboard">eboard</button>
                 <div class="dropdown-content">
@@ -31,19 +31,29 @@
             <img id="main-upe-logo" src="upelogo.png">
             <h2 class="all-caps">SORTING HAT</h2>
 
-            <div class="members">
-                <p>Members</p>
-                <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter member name followed by new line..."></textarea>
-                <br>
-                <button class="button-styles" id="createTeamsButton", type="button", onclick="getInput()", value = "Submit">Assign Members</button>
-                <button id="reset" class="button-styles">Clear</button>
+            <div class="contents">
+                <div class="members">
+                    <p>Members</p>
+                    <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter member name followed by new line..."></textarea>
+                    <br>
+                    <button class="button-styles" id="assignMembersButton", type="button", onclick="getInput()", value = "Submit">Assign Members</button>
+                    <button id="reset" class="button-styles">Clear</button>
+                </div>
+                <div class="groups">
+                    <p>Group Names</p>
+                    <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter team name followed by new line..."></textarea>
+                    <br>
+                    <button class="button-styles" id="createTeamsButton", type="button", onclick="getInput()", value = "Submit">Create Teams</button>
+                </div>
             </div>
-            <div class="results">
-                <p>Group Names</p>
-                <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter team name followed by new line..."></textarea>
-                <br>
-                <div id="output" class="output"></div>
-                <button class="button-styles" id="createTeamsButton", type="button", onclick="getInput()", value = "Submit">Create Teams</button>
+
+            <div id="output" class="output">
+                <p>Results</p>
+                <hr>
+                <div id="team-1"></div>
+                <div id="team-2"></div>
+                <div id="team-3"></div>
+                <div id="team-4"></div>
             </div>
         </div>
 
