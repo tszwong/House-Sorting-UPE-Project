@@ -152,7 +152,7 @@ textarea {
   height: 300px;
 }
 
-.results {
+.groups {
   text-align: center;
 }
 
@@ -174,11 +174,40 @@ textarea {
   margin-right: 20px;
 }
 
-.results {
+.groups {
   display: inline-block;
   margin-left: 20px;
 }
 
 #reset {
   margin-left: 10px;
+}
+
+#createTeamsButton:hover {
+  background-color: rgb(21, 95, 39);
+}
+
+#assignMembersButton:hover {
+  background-color: rgb(21, 95, 39);
+}
+
+/* .contents {
+  background-color: rgb(231, 215, 215);
+  width: 100%;
+  padding-bottom: 30px;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  width: 35%;
+  margin: 0 auto;
+}
+
+#output {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
