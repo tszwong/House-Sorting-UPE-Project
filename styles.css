@@ -118,3 +118,20 @@ textarea {
   width: 20%;
   height: 20%;
 }
+
+.results {
+  text-align: center;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  line-height: 30px;
+  text-align: center;
+}
+::-webkit-input-placeholder { /* Webkit */
+  line-height: 30px;
+  text-align: center;
+}
+:-ms-input-placeholder { /* IE */
+  line-height: 30px;
+  text-align: center;
+}
