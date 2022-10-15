@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="author" content="Tsz Kit Wong">
     <meta name="description" content="bu club page">
+    
+    <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -19,26 +23,25 @@
                     <a href="#">current</a>
                     <a href="#">past</a>
                 </div>
-            </div>
-            <button class="dropdown-button" href="#">past events</button>
-            <div class="dropdown">
-                <button class="dropdown-button" href="#">contact</button>
-                    <div class="dropdown-content">
-                        <a href="#">for sponsors</a>
-                        <a href="#">general contact</a>
-                    </div>
             </div> -->
         </div>
 
         <div class="description">
             <img id="main-upe-logo" src="upelogo.jpeg">
-            <div>
-                <h2 class="all-caps">SORTING HAT</h2>
-                <textarea name="", id="input", cols="47", rows="10", 
-                placeholder=" Enter your name followed by a comma and space..."></textarea>
+            <h2 class="all-caps">SORTING HAT</h2>
+
+            <div class="members">
+                <p>Members</p>
+                <textarea id="input" name="" cols="45"rows="10" placeholder=" Enter name followed by new line..."></textarea>
                 <br>
-                <button id="createTeamsButton">Assign To Teams</button>
+                <button id="createTeamsButton", type="button", onclick="getInput()", value = "Submit">Assign To Teams</button>
             </div>
+        </div>
+
+        <div class="results">
+            <h2 class="hidden">Group List</h2>
+            <div id="output" class="output"></div>
+            <button id="reset" class="hidden">Restart</button>
         </div>
 
         <div class="footer-bar">
