@@ -19,11 +19,12 @@
 
     <div class="main">
 
+        <!-- top navigation bar -->
         <div class="navbar-expand-lg navbar-custom">
             <div class="dropdown">
                 <button class="home-button" id="UPE-button" href="index.html">UPE SORTING HAT</button>
                 <div class="dropdown-content">
-                    <a href="#">About This Project</a>
+                    <a href="#">About This Project</a>  <!-- page to describe project, addition info, etc. -->
                 </div>
             </div>
         </div>
@@ -33,6 +34,8 @@
             <h2 class="all-caps">SORTING HAT</h2>
 
             <div class="contents">
+
+                <!-- member input textarea section -->
                 <div class="members">
                     <p>Members</p>
                     <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter member name followed by new line..."></textarea>
@@ -40,19 +43,22 @@
                     <button class="button-styles" id="assignMembersButton", type="button", onclick="getInput()", value = "Submit">Assign Members</button>
                     <button id="reset" class="button-styles">Clear</button>
                 </div>
+
+                <!-- group input textarea section -->
                 <div class="groups">
                     <p>Group Names</p>
                     <textarea id="input" name="" cols="43"rows="10" placeholder=" Enter team name followed by new line..."></textarea>
                     <br>
                     <button class="button-styles" id="createTeamsButton", type="button", onclick="getInput()", value = "Submit">Create Teams</button>
                 </div>
+
             </div>
 
             <h2 class="all-caps" id="results">Results</h2>
             <hr>
 
             <div class="container">
-                <div id="output" class="row">
+                <div id="output" class="row"> <!-- display section for the different families/teams and the members assigned -->
                     <div class="col-sm" id="team-1">
                         <h3 class="team-title">Team 1</h3> <!-- placeholder for team name -->
                         <p class="members-title">Members</p>
@@ -93,7 +99,7 @@
             </div>
         </div>
 
-        <nav class="social-media">
+        <nav class="social-media">  <!-- social media side bar -->
             <ul>
                 <li><a href="https://github.com/tszwong/House-Sorting-UPE-Project"><i class="fab fa-github"></i><span>Github</span></a></li>
                 <li><a href="https://www.instagram.com/upebu/?hl=en"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
