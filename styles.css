@@ -55,7 +55,7 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 182px;
+  min-width: 211px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -73,7 +73,7 @@
   background-color: #333;
   color: #f1f1f1;
   transition: 0.5s;
-  width: 182px;
+  width: 211px;
 }
   
 /* Show the dropdown menu on hover */
@@ -221,7 +221,7 @@ hr {
 }
 
 #output {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -231,7 +231,7 @@ nav{
   transition: all 0.3s linear;
   margin-bottom: 30px;
   position: fixed;
-  top: 50%;
+  top: 75%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -302,4 +302,23 @@ nav ul {
 
 .navbar-custom {
   background-color: #333;
+}
+
+#nav-bar-icon {
+  height: 10%;
+  width: 10%;
+}
+
+#results {
+  margin: 0;
+  padding: 10px;
+  letter-spacing: 6px;
+}
+
+.all-caps{
+  text-transform: uppercase;
+}
+
+.members-display:hover {
+  color: #941111;
 }
