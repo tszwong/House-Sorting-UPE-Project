@@ -2,7 +2,7 @@ const MemberInput = props => {
     const [input, setInput] = React.useState("")
 
     const setMembers = async () => {
-        let memberList = input.split("\n").map(s => s.trim())
+        let memberList = input.split("\n").map(s => s.trim()).filter(s => s !== "")
         if (input === "") {
             memberList = []
         }
@@ -25,12 +25,9 @@ const MemberInput = props => {
 const GroupInput = props => {
     const [input, setInput] = React.useState("")
 
-    const setGroups = () => {
-        let groupList = input.split("\n").map(s => s.trim())
-        if (input === "") {
-            groupList = []
-        }
-        props.setGroups(groupList)
+    const setGroupNames = () => {
+        let groupList = input.split("\n").map(s => s.trim()).filter(s => s !== "")
+        props.setGroupNames(groupList)
     }
 
     return (
@@ -40,7 +37,7 @@ const GroupInput = props => {
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="createTeamsButton" type="button" value = "Submit"
-                onClick={() => setGroups()}>Create Teams</button>
+                onClick={() => setGroupNames()}>Create Teams</button>
         </div>
     )
 }

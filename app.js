@@ -1,23 +1,23 @@
 const App = () => {
 
   const [members, setMembers] = React.useState([])
+  const [groupNames, setGroupNames] = React.useState([])
   const [groups, setGroups] = React.useState([])
-  const [groupObj, setGroupObj] = React.useState({})
 
   const createGroups = () => {
     // create object to track results
     const result = {}
-    groups.forEach((group, i) => {
+    groupNames.forEach((group, i) => {
       result[group] = []
     })
 
     if (Object.keys(result).length === 0) {
-      setGroupObj(result)
+      setGroups([])
       return
     }
 
     // assign members to groups
-    const maxGroupLength = Math.trunc(members.length / groups.length)
+    const maxGroupLength = Math.trunc(members.length / groupNames.length)
     members.forEach((member, i) => {
       let validGroups = Object.entries(result).filter(x => x[1].length < maxGroupLength)
       if (validGroups.length === 0) {
@@ -28,7 +28,7 @@ const App = () => {
       result[assignedGroup].push(member)
     })
 
-    setGroupObj(result)
+    setGroups(Object.entries(result))
   }
 
   React.useEffect(createGroups, [members])
@@ -39,13 +39,13 @@ const App = () => {
       <h2 className="all-caps">SORTING HAT</h2>
       <div className="contents">
         <MemberInput setMembers={setMembers} createGroups={createGroups} />
-        <GroupInput setGroups={setGroups} />
+        <GroupInput setGroupNames={setGroupNames} />
       </div>
 
       <h2 className="all-caps" id="results">Results</h2>
       <hr />
 
-      <OutputRows members={members} groups={groups} />
+      <OutputRows groups={groups} />
     </div>
   )
 }
