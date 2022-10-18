@@ -31,7 +31,7 @@ const App = () => {
     setGroups(Object.entries(result))
   }
 
-  React.useEffect(createGroups, [members])
+  React.useEffect(createGroups, [members, groupNames])
 
   return (
     <div>
