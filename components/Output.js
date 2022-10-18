@@ -22,7 +22,7 @@ const Row = props => {
 const OutputRows = props => {
     return (
         <div className="container">
-            <p>{props.groups}</p>
+            <p>{props.members}</p>
         </div>
     )
 }

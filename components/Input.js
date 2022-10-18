@@ -1,8 +1,11 @@
 const MemberInput = props => {
     const [input, setInput] = React.useState("")
 
-    const setMembers = () => {
-        const memberList = input.split("\n").map(s => s.trim())
+    const setMembers = async () => {
+        let memberList = input.split("\n").map(s => s.trim())
+        if (input === "") {
+            memberList = []
+        }
         props.setMembers(memberList)
     }
 
@@ -23,7 +26,10 @@ const GroupInput = props => {
     const [input, setInput] = React.useState("")
 
     const setGroups = () => {
-        const groupList = input.split("\n").map(s => s.trim())
+        let groupList = input.split("\n").map(s => s.trim())
+        if (input === "") {
+            groupList = []
+        }
         props.setGroups(groupList)
     }
 
