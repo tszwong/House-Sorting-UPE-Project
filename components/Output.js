@@ -1,3 +1,7 @@
+/*
+component for a single group; includes template and dynamically rendered member list
+*/
+
 const Group = props => {
     const [name, members] = props.info
 
@@ -15,6 +19,9 @@ const Group = props => {
     )
 }
 
+/*
+container for groups, dynamically renders up to ROWSIZE groups
+*/
 const Row = props => {
     return (
         <div id="output" className="row">
@@ -25,10 +32,14 @@ const Row = props => {
     )
 }
 
+/*
+container for rows of teams, creates and renders rows based on groups state
+*/
 const OutputRows = props => {
 
-    const ROWSIZE = 4
+    const ROWSIZE = 4  // can change if we want more/less elements per row
 
+    // turns array into array of rows of size ROWSIZE; if uneven division, last row will be shorter
     const splitIntoRows = groups => {
         const result = []
         for (let i = 0; i < groups.length; i += ROWSIZE) {

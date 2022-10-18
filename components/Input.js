@@ -1,6 +1,10 @@
+/*
+Component that takes in input for members, passes up to root
+*/
 const MemberInput = props => {
-    const [input, setInput] = React.useState("")
+    const [input, setInput] = React.useState("")  // current state of textfield
 
+    // converts parameter to list; assigns to state in root
     const setMembersToInput = newMembers => {
         let memberList = newMembers.split("\n").map(s => s.trim()).filter(s => s !== "")
         if (input === "") {
@@ -9,8 +13,7 @@ const MemberInput = props => {
         props.setMembers(memberList)
     }
 
-    const setMembers = () => setMembersToInput(input)
-
+    // clears textfield, passes change to states
     const clear = () => {
         document.getElementById("membersInput").value = ""
         setInput("")
@@ -24,18 +27,25 @@ const MemberInput = props => {
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="assignMembersButton" type="button" value = "Submit"
-                onClick={setMembers} >Assign Members</button>
+                onClick={() => setMembersToInput(input)} >Assign Members</button>
             <button id="reset" className="button-styles"
                 onClick={clear}>Clear</button>
         </div>
     )
 }
 
+/*
+Component that takes in input for groups, passes up to root
+*/
 const GroupInput = props => {
-    const [input, setInput] = React.useState("")
+    const [input, setInput] = React.useState("")  // current state of textfield
 
+    // converts input to list; assigns to state in root
     const setGroupNames = () => {
         let groupList = input.split("\n").map(s => s.trim()).filter(s => s !== "")
+        if (input === "") {
+            groupList = []
+        }
         props.setGroupNames(groupList)
     }
 
