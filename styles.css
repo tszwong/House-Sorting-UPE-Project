@@ -217,7 +217,7 @@ nav{
   transition: all 0.3s linear;
   margin-bottom: 30px;
   position: fixed;
-  top: 65%;
+  top: 60%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -309,8 +309,7 @@ nav ul {
   background-color: #941111;
   color: white;
   text-align: center;
-  padding-top: 23px;
-  padding-bottom: 10px;
+  padding-top: 12px;
   margin-top: 20px;
 }
 
