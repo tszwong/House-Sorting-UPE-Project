@@ -1,12 +1,23 @@
+/*
+Component that takes in input for members, passes up to root
+*/
 const MemberInput = props => {
-    const [input, setInput] = React.useState("")
+    const [input, setInput] = React.useState("")  // current state of textfield
 
-    const setMembers = async () => {
-        let memberList = input.split("\n").map(s => s.trim())
+    // converts parameter to list; assigns to state in root
+    const setMembersToInput = newMembers => {
+        let memberList = newMembers.split("\n").map(s => s.trim()).filter(s => s !== "")
         if (input === "") {
             memberList = []
         }
         props.setMembers(memberList)
+    }
+
+    // clears textfield, passes change to states
+    const clear = () => {
+        document.getElementById("membersInput").value = ""
+        setInput("")
+        setMembersToInput("")
     }
 
     return (
@@ -16,21 +27,26 @@ const MemberInput = props => {
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="assignMembersButton" type="button" value = "Submit"
-                onClick={() => setMembers()} >Assign Members</button>
-            <button id="reset" className="button-styles">Clear</button>
+                onClick={() => setMembersToInput(input)} >Assign Members</button>
+            <button id="reset" className="button-styles"
+                onClick={clear}>Clear</button>
         </div>
     )
 }
 
+/*
+Component that takes in input for groups, passes up to root
+*/
 const GroupInput = props => {
-    const [input, setInput] = React.useState("")
+    const [input, setInput] = React.useState("")  // current state of textfield
 
-    const setGroups = () => {
-        let groupList = input.split("\n").map(s => s.trim())
+    // converts input to list; assigns to state in root
+    const setGroupNames = () => {
+        let groupList = input.split("\n").map(s => s.trim()).filter(s => s !== "")
         if (input === "") {
             groupList = []
         }
-        props.setGroups(groupList)
+        props.setGroupNames(groupList)
     }
 
     return (
@@ -40,7 +56,7 @@ const GroupInput = props => {
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="createTeamsButton" type="button" value = "Submit"
-                onClick={() => setGroups()}>Create Teams</button>
+                onClick={setGroupNames}>Create Teams</button>
         </div>
     )
 }
