@@ -37,11 +37,6 @@ body {
   background-color: #333;
 }
 
-#nav-bar-icon {
-  height: 10%;
-  width: 10%;
-}
-
 .home-button {
     background-color: #941111;
     color: white;
@@ -147,11 +142,15 @@ textarea {
   transition: 0.7s;
 }
 
+.button-styles:focus {
+  outline: none;
+}
+
 #main-upe-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 300px;
+  width: auto;
   height: 300px;
 }
 
