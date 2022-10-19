@@ -43,7 +43,7 @@ const App = () => {
   // VSCode throws errors from here on for me, but everything is fine
   return (
     <div>
-      <img id="main-upe-logo" src="assets/upeGlowLogoBLACK.png.png">
+      <img id="main-upe-logo" src="assets/upeGlowLogoBLACK.png">
       <h2 className="all-caps">SORTING HAT</h2>
       <div className="contents">
         <MemberInput setMembers={setMembers} createGroups={createGroups} />
