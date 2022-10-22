@@ -1,6 +1,6 @@
 # House-Sorting-UPE-Project
 
-URL of webpage --> https://tszwong.github.io/House-Sorting-UPE-Project/
+URL --> https://tszwong.github.io/House-Sorting-UPE-Project/
 <br>
 Creators/Contributors: Tsz Kit Wong, Toby Ueno
 <br>
