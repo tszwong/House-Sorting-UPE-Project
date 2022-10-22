@@ -8,6 +8,6 @@ This project is a contribution for Boston University's Upsilon Pi Epsilon. Provi
 
 ** Preview **
 <br>
-<img src="assets/design.png">
+<img src="assets/design.png" width="400">
 <br>
-<img src="assets/function.png">
+<img src="assets/function.png" width="400">
