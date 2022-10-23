@@ -46,6 +46,19 @@ const GroupInput = props => {
         if (input === "") {
             groupList = []
         }
+        // identify and split off trailing numbers in brackets
+        groupList = groupList.map(s => {
+            const frags = s.split(" ")
+            const last = frags.pop()
+            let numMembers = 0
+            if (last.match(/\[[0-9]+\]/)) {
+                numMembers = parseInt(last.substring(1, last.length-1))
+                if (numMembers === NaN) numMembers = 0
+            } else {
+                frags.push(last)
+            }
+            return [frags.join(" "), numMembers]
+        })
         props.setGroupNames(groupList)
     }
 

@@ -4,15 +4,15 @@ root component, rendered directly to index.html
 const App = () => {
 
   const [members, setMembers] = React.useState([])
-  const [groupNames, setGroupNames] = React.useState([])  // strings containing group names
+  const [groupNames, setGroupNames] = React.useState([])  // contains 2-element arrays: [groupName, numOfMembers]
   const [groups, setGroups] = React.useState([])  // contains 2-element arrays: [groupName, [members]]
 
   // Defines the groups variable based on current state of members and groupNames
   const createGroups = () => {
     // create object to track results
     const result = {}
-    groupNames.forEach((group, i) => {
-      result[group] = []
+    groupNames.forEach(([group, numMembers], i) => {
+      result[group] = [numMembers, []]  // internal array: list of new members
     })
 
     if (Object.keys(result).length === 0) {
@@ -20,21 +20,23 @@ const App = () => {
       return
     }
 
+    const oldMembers = groupNames.reduce((total, group) => total + group[1], 0)
+
     // assign members to groups
-    const maxGroupLength = Math.trunc(members.length / groupNames.length)
+    const maxGroupLength = Math.trunc((members.length + oldMembers) / groupNames.length)
     members.forEach((member, i) => {
       // find groups with slots remaining
-      let validGroups = Object.entries(result).filter(x => x[1].length < maxGroupLength)
+      let validGroups = Object.entries(result).filter(x => (x[1][0] + x[1][1].length) < maxGroupLength)
       if (validGroups.length === 0) {
-        validGroups = Object.entries(result).filter(x => x[1].length < maxGroupLength + 1)
+        validGroups = Object.entries(result).filter(x => (x[1][0] + x[1][1].length) < maxGroupLength + 1)
       }
       // assign member to random valid group
       const validGroupNum = Math.floor(Math.random() * validGroups.length)
       const assignedGroup = validGroups[validGroupNum][0]
-      result[assignedGroup].push(member)
+      result[assignedGroup][1].push(member)
     })
-
-    setGroups(Object.entries(result))
+    console.log(Object.entries(result).map(([teamName, info]) => [teamName, info[1]]))
+    setGroups(Object.entries(result).map(([teamName, info]) => [teamName, info[1]]))
   }
 
   // run createGroups on state change
