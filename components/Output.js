@@ -12,7 +12,7 @@ const Group = props => {
             <br />
             <div className="members-display">
                 {members.map((member, i) => {return (
-                    <h5>{member}</h5>
+                    <h5 id={i}>{member}</h5>
                 )})}
             </div>
         </div>
