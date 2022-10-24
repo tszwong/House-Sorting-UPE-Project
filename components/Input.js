@@ -41,9 +41,9 @@ const GroupInput = props => {
     const [input, setInput] = React.useState("")  // current state of textfield
 
     // converts input to list; assigns to state in root
-    const setGroupNames = () => {
-        let groupList = input.split("\n").map(s => s.trim()).filter(s => s !== "")
-        if (input === "") {
+    const setGroupNamesToInput = newGroupNames => {
+        let groupList = newGroupNames.split("\n").map(s => s.trim()).filter(s => s !== "")
+        if (newGroupNames === "") {
             groupList = []
         }
         // identify and split off trailing numbers in brackets
@@ -62,6 +62,12 @@ const GroupInput = props => {
         props.setGroupNames(groupList)
     }
 
+    const clear = () => {
+        document.getElementById("groupInput").value = ""
+        setInput("")
+        setGroupNamesToInput("")
+    }
+
     return (
         <div className="groups">
             <p>Group Names</p>
@@ -71,7 +77,9 @@ const GroupInput = props => {
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="createTeamsButton" type="button" value = "Submit"
-                onClick={setGroupNames}>Create Teams</button>
+                onClick={() => setGroupNamesToInput(input)}>Create Teams</button>
+            <button id="reset" className="button-styles"
+                onClick={clear}>Clear</button>
         </div>
     )
 }
