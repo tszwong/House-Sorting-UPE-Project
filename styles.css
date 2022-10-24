@@ -1,10 +1,7 @@
 @font-face {
-    font-family: "medio";
-    src: url("medio.otf");
-    font-family: "vogue";
-    src: url("Vogue.ttf");
-    font-family: "cocogoose heavy";
-    src: url("");
+    font-family: Raleway;
+    src: url("../UPEHouseSort/Raleway/static/Raleway-Black.ttf") format("truetype");
+    font-style: normal;
 }
 
 * {
@@ -150,21 +147,24 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 370px;
+  width: 375px;
   height: 300px;
 }
 
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   line-height: 20px;
   text-align: center;
+  font-size: 15px;
 }
 ::-webkit-input-placeholder { /* Webkit */
   line-height: 20px;
   text-align: center;
+  font-size: 15px;
 }
 :-ms-input-placeholder { /* IE */
   line-height: 20px;
   text-align: center;
+  font-size: 15px;
 }
 
 .members {
