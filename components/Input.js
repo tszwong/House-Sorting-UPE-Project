@@ -73,7 +73,7 @@ const GroupInput = props => {
             <p>Group Names</p>
             <textarea id="groupInput" name="" cols="43"rows="10"
                 placeholder={` Enter team name followed by new line... 
-                \n\n Optionally, add number of existing members in brackets e.g. "Linked Lists [10]" `} 
+                \n\n Optionally, add number of existing members in brackets  ex: "Linked Lists [10]" `} 
                 onChange={e => setInput(e.target.value)}/>
             <br />
             <button className="button-styles" id="createTeamsButton" type="button" value = "Submit"
