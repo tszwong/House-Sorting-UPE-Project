@@ -155,14 +155,17 @@ textarea {
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   line-height: 20px;
   text-align: center;
+  font-size: 16px;
 }
 ::-webkit-input-placeholder { /* Webkit */
   line-height: 20px;
   text-align: center;
+  font-size: 16px;
 }
 :-ms-input-placeholder { /* IE */
   line-height: 20px;
   text-align: center;
+  font-size: 16px;
 }
 
 .members {
