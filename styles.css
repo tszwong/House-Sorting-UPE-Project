@@ -130,6 +130,7 @@ textarea {
   border-radius: 10px;
   border: none;
   background-color: rgb(199, 199, 199);
+  color: #333;
 }
 
 .button-styles:hover {
@@ -154,17 +155,14 @@ textarea {
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   line-height: 20px;
   text-align: center;
-  font-size: 15px;
 }
 ::-webkit-input-placeholder { /* Webkit */
   line-height: 20px;
   text-align: center;
-  font-size: 15px;
 }
 :-ms-input-placeholder { /* IE */
   line-height: 20px;
   text-align: center;
-  font-size: 15px;
 }
 
 .members {
