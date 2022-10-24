@@ -1,6 +1,7 @@
 @font-face {
     font-family: Raleway;
     src: url("../UPEHouseSort/Raleway/static/Raleway-Black.ttf");
+    font-style: normal;
 }
 
 * {
